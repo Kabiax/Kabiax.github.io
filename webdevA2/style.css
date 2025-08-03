@@ -1,0 +1,297 @@
+* {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: darkgray;
+    overflow-x: hidden;
+    background-image:url(./images/uslehmanbrothers.jpg);
+    background-size: cover;
+}
+
+h1 {
+    font-size: 100px;
+}
+@media (max-width:800px){
+    h1 {
+        font-size: 50px;
+    }
+
+    h1::after {
+        content:" (Mobile)"
+    }
+}
+
+nav {
+    background: wheat;
+}
+
+nav ul {
+    display: inline;
+    padding: 0px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 30px;
+}
+
+button {
+    text-align: center;
+    background-color: #751d16;
+    color: #bfb495;
+    padding: 10px 40px;
+    font-size: 35px;
+}
+@media (max-width:800px){
+    nav ul li {
+        display: inline;
+        padding: 5px;
+    }
+    button {
+        text-align: center;
+        background-color: #751d16;
+        color: #bfb495;
+        padding: 5px 25px;
+        font-size: 25px;
+    }
+}
+
+.pagecontainer {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    align-content: center;
+}
+
+.page{
+    width:98%;
+    height:auto;
+    border:5px solid #4a5b75;
+    margin:10px auto;
+    transition: all 1s ease;
+    left: 100%;
+    z-index: 0;
+    position: relative;
+    display: none;
+}
+
+.page.active {
+  left: 0;
+  opacity: 1;
+  z-index: 2;
+  display: block;
+}
+
+.page.slide-out {
+  left: 100%;
+  opacity: 0;
+  z-index: 1;
+  display: none;
+}
+
+#page1{
+    background:grey;
+}
+#page2{
+    background:grey;
+}
+#page3{
+    background:grey;
+}
+#page4{
+    background:grey;
+}
+
+.sechead{
+    font-size: 50px;
+    flex: 100%;
+    padding: 20px;
+}
+
+.page article {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+@media (max-width:800px){
+    .image {
+        width: 350px;
+    }
+}
+
+.page article > div{
+    flex: 5;
+    background: rgb(137, 134, 134);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div h2 {
+    font-size: 30px;
+}
+@media (max-width:800px){
+    div h2 {
+        font-size: 20px;
+    }
+}
+
+article div p {
+    margin: 30px;
+    font-size: 20px;
+}
+@media (max-width:800px){
+    article div p {
+        margin: 20px;
+        font-size: 15px;
+    }
+}
+
+.gamesec {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.gamesec h2 {
+    font-size: 40px;
+    flex: 100%;
+}
+
+.gamesec div {
+    border: 3px solid black;
+    width: 100%;
+    height: auto;
+}
+
+.gamearea {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.gamearea p, .gamearea h3 {
+    margin: 5px;
+    font-size: 20px;
+    flex: 100%;
+}
+
+.gamearea button {
+    text-align: center;
+    background-color: #751d16;
+    color: #bfb495;
+    padding: 1px 4px;
+    font-size: 15px;
+    flex: 1;
+}
+
+.gamearea .sellbutton {
+    text-align: center;
+    background-color: #751d16;
+    color: #bfb495;
+    padding: 1px 4px;
+    font-size: 15px;
+    flex: 1;
+}
+
+.gamearea .buybutton {
+    text-align: center;
+    background-color: #167527;
+    color: #bfb495;
+    padding: 1px 4px;
+    font-size: 15px;
+    flex: 1;
+}
+
+.gamearea .divside{
+    border: 1px solid black;
+    width: 20%;
+    height: 500px;
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gamearea .divcent{
+    border: 1px solid black;
+    width: 60%;
+    height: 500px;
+    flex: 4;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.divcent p {
+    flex: 100%;
+}
+
+.divcent .stockflucs {
+    font-size: 30px;
+}
+
+.divcent div {
+    height: 40%;
+    flex: 2;
+}
+
+@media (max-width:800px){
+    .gamesec h2 {
+        font-size: 20px;
+        flex: 100%;
+    }
+
+    .gamearea p, .gamearea h3 {
+        margin: 3px;
+        font-size: 14px;
+        flex: 100%;
+    }
+
+    .gamearea .sellbutton {
+        text-align: center;
+        background-color: #751d16;
+        color: #bfb495;
+        padding: 1px 4px;
+        font-size: 10px;
+        flex: 1;
+    }
+
+    .gamearea .buybutton {
+        text-align: center;
+        background-color: #167527;
+        color: #bfb495;
+        padding: 1px 4px;
+        font-size: 10px;
+        flex: 1;
+    }
+
+    .divcent .stockflucs {
+        font-size: 10px;
+    }
+
+    .divcent .stockflucs {
+        font-size: 15px;
+    }
+
+    .divcent div {
+        height: 20%;
+        flex: 2;
+    }
+}
+
+footer {
+    z-index: 5;
+    text-align: center;
+    background-color: wheat;
+    padding: 20px;
+    position: relative;
+}
+@media (max-width:800px) {
+    footer .qrcode {
+        display: none;
+    }
+}
